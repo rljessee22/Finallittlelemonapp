@@ -3,9 +3,10 @@ import './App.css';
 
 function App() {
   return (
-    <nav className="App">
-      <header>Homepage</header>
-    </nav>
+    <Nav className="App">
+      <Header>Homepage</Header>
+      <img src></img>
+    </Nav>
   );
 }
 
