@@ -1,6 +1,11 @@
+import React from 'react';
 import './App.css';
-function header(){
-return(
-    <header></header>
-)
-}
+const Header=() =>{
+return (
+    <div>
+
+    </div>
+);
+};
+
+export default Header;
