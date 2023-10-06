@@ -1,32 +1,17 @@
-import React, { useState } from 'react';
-import logo from '../images/logo1.png'
+import React from 'react';
+import logo1 from '../images/logo1.png'
 const Nav =() => {
-    const [menuOpen, setMenuOpen]=useState(false);
 
-    const  toggleMenu =() =>{
-        setMenuOpen(!menuOpen);
-    }
 return(
-    <nav className={`navbar ${menuOpen ? "open" : ""}`}>
-        <a href="/" className="logo">
-            <img src={logo} alt="logo"/>
-        </a>
+    <nav>
+        <img src={logo1} alt="Little lemonlogo"></img>
 
-        <div className="menu-icon" onClick={toggleMenu}>
-            <div className="mBar"></div>
-            <div className="mBar"></div>
-            <div className="mBar"></div>
-        </div>
-
-        <ul className={`nav-links ${menuOpen ? "visible" : ""}`}>
+        <ul>
             <li>
                 <a href="/">Home</a>
             </li>
             <li>
                 <a href="/">About</a>
-            </li>
-            <li>
-                <a href="/">Services</a>
             </li>
             <li>
                 <a href="/">Menu</a>

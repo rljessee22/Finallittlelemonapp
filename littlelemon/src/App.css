@@ -106,12 +106,10 @@ button{
   border-radius: 20px;
 }
 
-form, .confirm{
-  padding: 10px;
-}
-
-.formField{
-  padding:50px 20px;
+form{
+  display:grid;
+  max-width:200px;
+  gap:20px;
 }
 
 input, label{
@@ -119,14 +117,14 @@ input, label{
   margin-right:20px;
   margin-bottom:20px;
 }
-#bDate, #bTime, #bGuests, #bOccasion{
+#reserve-date, #reserve-time, #reserve-guests, #reserve-occasion{
   background:#bdbdbd43;
   padding: 8px 24px;
   border: none;
   outline: none;
   border-radius:2px;
 }
-.btnReceive input{
+.btnConfirm input{
   padding: 12px 16px;
   margin-top:20px;
   background: #495e57;
@@ -135,54 +133,8 @@ input, label{
   border-radius: 4px;
 }
 
-.confirm span{
+.confirmation span{
   color:blue;
-}
-
-.menu-container{
-  margin:110px auto;
-  padding: 10px;
-}
-.menu-container h2{
-  color:#000;
-}
-.menu-header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  flex-wrap: wrap;
-}
-.cards{
-  margin-top: 30px;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
-  flex-wrap:wrap;
-  gap: 2rem 1rem;
-}
-
-.menu-items{
-  width:350px;
-  background: #a9c8be;
-  border-radius: 8px;
-}
-.menu-container img{
-  width: 100%;
-  height: 233px;
-  border-radius: 8px;
-}
-.menu-content{
-  padding:5px 15px;
-}
-.menu-content .heading{
-  display: flex;
-  justify-content: space-between;
-}
-.orderbtn{
-  padding: 5px 12px;
-  margin-bottom: 20px;
-  font-size: 16px;
-  font-weight: 600;
 }
 footer section{
   padding: 10px;
@@ -207,55 +159,22 @@ footer ul{
 footer ul li{
   padding: 8px 0;
 }
-@media screen and (max-width:768px){
-  .menu-icon{
-    display:block;
+
+@media (min-width:701px) {
+  header section, footer section {
+    display:grid;
+    grid-auto-flow: row;
   }
-  .nav-links{
-    display:none;
-  }
-  .nav-links.visible{
-    display:flex;
-    background:#333333;
-    z-index:1000;
-    padding:20px 0;
-  }
-  .navbar{
-    background:#fff;
-    padding:10px;
-  }
-  nav ul li a{
-    color: #fff;
-  }
-  .bar{
-    background: #333333;
-  }
-  .banner-img{
-    display:none;
-  }
-  form, .confirm{
-    padding: 10px;
-  }
-  .header section, .menu-container{
-    padding:10px;
-  }
-  .menu-container{
-    margin: 20px 0;
-  }
-  .menu-header{
-    justify-content:flex-start;
-  }
-  .menu-items{
-    width:100%;
-  }
+}
+@media screen and (max-width:765px){
+
   footer section{
     padding:10px;
     flex-direction:column;
   }
-  .company-info p{
-    width:100%;
+  header section{
+    grid-template-columns: 1fr 1fr;
+    display:grid;
+    justify-items: center;
   }
-}
-.hidden{
-  display:none;
 }
